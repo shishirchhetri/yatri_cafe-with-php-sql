@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
+
+:root{
+    /* --main-color:#d3ad7f; */
+    --main-color:rgb(255, 139, 6);
+    --black:#13131a;
+    --bg:rgb(241, 244, 247);
+    --border:.1rem solid var(--white);
+    --white:rgb(255, 255, 255);
+}
+.dark-mode{
+    --black: rgb(255, 255, 255);
+    --bg:rgb(30,45,65); 
+    --white:#13131a;
+    --border:.1rem solid var(--white);
+
+}
+
+*{
+    font-family: 'Yuji Syuku', serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    /* transition: .3s ease-in-out; */
+}
+
+html{
+    /* font-size: 62.5%; */
+    overflow-x: hidden;
+    /* scroll-padding-top: 9rem;
+    scroll-behavior: smooth; */
+}
+
+
+body{
+    background: var(--bg);
+}
+
+section{
+    padding:2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    color:var(--white);
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color:var(--white);
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+
+
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.5rem 7%;
+    position: fixed;
+    top:0; 
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow:5px 2px rgba(117, 111, 111, 0.4);
+    
+}
+.header .logo{
+    display: flex;
+    align-items: center;
+}
+.header .logo p{
+    font-size: 24px;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: bolder;
+    margin-left: 5px;
+}
+.header .logo img{
+    height: 6rem;
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color:var(--white);
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.header .navbar a:hover{
+    color:var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+.nav-icon{
+    color:var(--white);
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    display: none;
+}
+.nav-icon div{
+    margin-right: 10px;
+    
+}
+.nav-icon div:hover{
+    color: var(--main-color);
+}
+.header .icons div{
+    color:var(--white);
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+
+.header .icons div:hover{
+    color:var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top:115%;
+    right: 7%;
+    background: var(--bg);
+    width: 30rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+    width: 100%;
+    max-width: 250px;
+    transition: 0;
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 80%;
+    max-width: 250px;
+    font-size: 1.6rem;
+    
+    padding:1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    background-color: none;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color:var(--black);
+    padding-left: 5px;
+}
+
+.header .search-form label:hover{
+    color:var(--main-color);
+}
+
+/* -----------for message top----------------- */
+.message{
+    background-color: transparent;
+    margin-bottom: 2rem;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    font-size: 24px;
+    margin: auto;
+    width: 50%;
+}
+.message span{
+font-size: 2.5rem;
+color: black;
+}
+.message i{
+    font-size: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.message i:hover{
+    color: red;
+
+}
+
+/* -----------------Add products------------- */
+.products{
+   height: fit-content;
+    width: 60%;
+    margin: auto;
+    border: 1px dotted silver;
+    padding: 10px;
+}
+.container{
+margin: 10px ;
+}
+.inputbox{
+    padding: 5px 2px;
+    margin: 1px; 
+}
+textarea{
+    resize: none;
+}
+.add_products .btn{
+ text-transform:capitalize;
+ padding: 5px;
+ font-size: 18px;
+ color: white;
+}
+.add_products .btn:hover{
+    background-color: green;
+    transition: .3s all;
+}
+
+/* ------------------show products--------------- */
+.product_container{
+    height: 80vh;
+    display: grid;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+}
+.product_box img{
+    height: 300px;
+    width: 200px;
+    padding: 5px 10px;
+
+}
+
+
+
+/* -----------------cart-------------------- */
+.shopping-cart table{
+    text-align: center;
+    width: 100%;
+ }
+ 
+ .shopping-cart table thead th{
+    padding:1rem;
+    font-size: 1.rem;
+    color:white;
+    background-color:var(--main-color);
+ }
+ 
+ .shopping-cart table tr td{
+    border-bottom: var(--border);
+    padding:1.5rem;
+    font-size: 2rem;
+    color:black;
+ }
+ 
+ .shopping-cart table input[type="number"]{
+    border: var(--border);
+    padding:1rem 2rem;
+    font-size: 2rem;
+    color:var(--black);
+    width: 10rem;
+ }
+ 
+ .shopping-cart table input[type="submit"]{
+    padding:.5rem 1.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: var(--orange);
+    color:var(--white);
+ }
+ 
+ .shopping-cart table input[type="submit"]:hover{
+    background-color: var(--black);
+ }
+ 
+ .shopping-cart table .table-bottom{
+    background-color: var(--bg-color);
+ }
+ 
+ .shopping-cart .checkout-btn{
+    text-align: center;
+    margin-top: 1rem;
+ }
+ 
+ .shopping-cart .checkout-btn a{
+    display: inline-block;
+    width: auto;
+ }
+ 
+ .shopping-cart .checkout-btn a.disabled{
+    pointer-events: none;
+    opacity: .5;
+    user-select: none;
+    background-color: var(--red);
+ }
+
+
+/* ---------------sidebar admin---------------------- */
+.sidebar{
+    height: 40vh;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+}
+/* ----------------------footer---------------- */
+.footer{
+    background:var(--black);
+    text-align: center;
+    box-shadow:5px 5px 10px 5px rgba(117, 111, 111, 0.4);
+
+}
+
+.footer .share{
+    padding:1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:var(--white);
+    border:var(--border);
+    margin:.3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+}
+
+.footer .links a{
+    padding:.7rem 2rem;
+    color:var(--white);
+    border:var(--border);
+    font-size: 2rem;
+}
+
+.footer .links a:hover{
+    background:var(--main-color);
+}
+.logo-container{
+    display: flex;
+    margin: 20px 10px;
+    flex-direction: column;
+    color:var(--white);
+    padding-bottom: 10px ;
+    border-bottom: 1px dashed var(--white);
+}
+.logo-container .logo-footer img{
+    height: 150px;
+    width: 150px;
+}
+.logo-container .logo-footer h1{
+    font-size: 28px;
+}
+.logo-container .desc p{
+    font-size: 22px;
+    max-width: 80%;
+    text-align: left;
+    letter-spacing: -1px;
+    margin: auto;
+}
+
+.final-info{
+    display: flex;
+    flex-direction: column;
+    color:var(--white);
+
+}
+.final-info .phone-mail .mail{
+    text-transform: none;
+    letter-spacing: 1px;
+}
+.final-info p{
+    font-size: 22px;
+    text-align: left;
+    margin: auto;
+    max-width: 70%;
+}
+.footer i{
+    padding-right: 10px;
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color:var(--white);
+    font-weight: lighter;
+    padding:1.5rem;
+}
+
+.footer .credit span{
+    color:var(--main-color);
+}
+
+.btn{
+    border-radius: 10px;
+}

@@ -1,0 +1,68 @@
+.products{
+    width: 80%;
+    margin: auto;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 5px;
+    text-align: left;
+}
+.products .product-container .product_box{
+    padding:2rem;
+    box-shadow: 1px 1px 1px red;
+    border:2px dotted red;
+    border-radius: .5rem;
+    width: 160px;
+    height: 80%;
+ }
+ 
+ 
+ .products .product-container .product_box img{
+    height: 200px;
+    width: 180px;
+ }
+ .quantity input{
+    width: 20px;
+ }
+ .product_box .btn{
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+
+ }
+ .product_box .btn:hover{
+    background-color: green;
+    transition: .3s all;
+ }
+
+ .message{
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    font-size: 24px;
+    margin: auto;
+    width: 50%;
+}
+.message span{
+font-size: 2.5rem;
+color: black;
+}
+.message i{
+    font-size: 2.5rem;
+    color: black;
+    cursor: pointer;
+}
+.message i:hover{
+    color: red;
+
+}
+
+/* ------------------------------- */
